@@ -30,8 +30,8 @@ export const journeyChapters: readonly JourneyChapter[] = [
       "I started taking freelance work — web platforms and automation systems for clients who needed something built, not just designed."
     ],
     highlights: ["Freelance developer", "Web platforms", "Automation"],
-    links: [],
-    todo: "TODO: Abdullah to supply — the first client, what it was, what he charged, what went wrong."
+    // Later: add the first client's story and a photo — who it was, what was built, what went wrong.
+    links: []
   },
   {
     id: "2024",
@@ -120,7 +120,7 @@ export const milestones: readonly Milestone[] = journeyChapters
     id: chapter.id,
     date: chapter.date,
     title: chapter.title,
-    paragraphs: chapter.todo ? [] : chapter.paragraphs,
+    paragraphs: chapter.paragraphs,
     todo: chapter.todo
   }));
 

@@ -36,9 +36,7 @@ export function Footer() {
             >
               LinkedIn
             </a>
-          ) : (
-            <span className="text-muted">TODO: LinkedIn URL</span>
-          )}
+          ) : null}
           <span className="text-muted md:ml-auto">{site.copyright}</span>
         </div>
       </Container>

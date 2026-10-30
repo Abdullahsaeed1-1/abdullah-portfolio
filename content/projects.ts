@@ -25,7 +25,7 @@ const timetable: FeaturedProject = {
   cover: {
     src: "/shots/timetable-grid.png",
     label: "screenshot: timetable grid",
-    alt: "The filled timetable grid for 33 sections."
+    alt: "A generated week in the Ali Public School desktop app: periods 1–5 for one Junior class, with the break and Friday's shorter timings."
   },
   accent: "signal",
   links: [
@@ -86,13 +86,13 @@ const timetable: FeaturedProject = {
     gallery: [
       {
         src: "/shots/timetable-warnings.png",
-        label: "screenshot: warnings and gaps page",
-        alt: "The warnings page listing every empty slot with its root cause."
+        label: "screenshot: warnings and data completeness",
+        alt: "The Warnings & Data Completeness page: the school's own five checks, grouped by campus."
       },
       {
-        src: "/shots/timetable-capacity.png",
-        label: "screenshot: capacity advisor",
-        alt: "The Capacity Advisor showing excess period demand per campus."
+        src: "/shots/timetable-health.png",
+        label: "screenshot: school health",
+        alt: "School Health for the Junior campus: 280 of 280 periods scheduled, 7 of 8 classes complete, and the five checks."
       }
     ],
     showSystemLayers: true,

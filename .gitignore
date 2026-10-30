@@ -1,0 +1,25 @@
+node_modules
+.next
+out
+coverage
+.env
+.env*.local
+*.log
+dist
+build
+Thumbs.db
+.DS_Store
+
+# Personal documents
+*CV*.pdf
+*.tsbuildinfo
+
+# Reference recordings
+*.mp4
+
+# Original photos (public/portrait.png is the processed copy the site uses)
+WhatsApp Image*
+abdullah thinkova*
+
+# Raw photos and screenshots before processing
+assets-raw/

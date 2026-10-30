@@ -1,0 +1,7 @@
+.next
+node_modules
+out
+coverage
+package-lock.json
+[0-9][0-9]_*.md
+_legacy

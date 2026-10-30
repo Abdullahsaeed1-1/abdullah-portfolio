@@ -1,0 +1,274 @@
+@import "tailwindcss";
+
+/*
+ * Colour system: every section declares a theme with data-theme, which scopes the semantic
+ * colours — ink, paper, muted, line, surface — for everything inside it. Sections stack with a
+ * rounded top edge, so scrolling reveals each new colour as a divider sliding over the last.
+ * <html> follows the section under the nav (ScrollTheme) so the nav cross-fades to match.
+ */
+
+/* Registered so the browser can interpolate them: the whole page cross-fades between themes. */
+@property --bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #0b0b0a;
+}
+@property --fg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f3f2ed;
+}
+@property --fg-muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #9a9a90;
+}
+@property --edge {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #262622;
+}
+@property --card {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #151513;
+}
+@property --accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #8c9a55;
+}
+
+@theme {
+  --color-*: initial;
+
+  /* The whole palette: black, olive, off-white. Legacy accent names alias olive. */
+  --color-night: #0b0b0a;
+  --color-coal: #0b0b0a;
+  --color-cream: #f3f2ed;
+  --color-olive: #8c9a55;
+  --color-olive-deep: #55602c;
+  --color-signal: #8c9a55;
+  --color-lavender: #8c9a55;
+  --color-cobalt: #8c9a55;
+  --color-acid: #8c9a55;
+  --color-lime: #8c9a55;
+  --color-mist: #f3f2ed;
+
+  --shadow-*: initial;
+  --inset-shadow-*: initial;
+  --drop-shadow-*: initial;
+  --text-shadow-*: initial;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --text-display--line-height: 1;
+  --text-display--letter-spacing: -0.035em;
+  --text-display--font-weight: 600;
+  --text-h1: clamp(2rem, 3.6vw, 3.25rem);
+  --text-h1--line-height: 1.05;
+  --text-h1--letter-spacing: -0.03em;
+  --text-h1--font-weight: 600;
+  --text-h2: clamp(1.5rem, 2.3vw, 2rem);
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.02em;
+  --text-h2--font-weight: 600;
+  --text-h3: 1.125rem;
+  --text-h3--line-height: 1.3;
+  --text-h3--letter-spacing: -0.01em;
+  --text-h3--font-weight: 500;
+  --text-stat: clamp(3.5rem, 7.5vw, 6.5rem);
+  --text-stat--line-height: 0.9;
+  --text-stat--letter-spacing: -0.05em;
+  --text-stat--font-weight: 600;
+  --text-body: 1rem;
+  --text-body--line-height: 1.7;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.6;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-mono: 0.8125rem;
+  --text-mono--line-height: 1.6;
+  --text-mono--letter-spacing: 0.02em;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.4;
+  --text-eyebrow--letter-spacing: 0.14em;
+
+  --container-content: 1240px;
+  --container-prose: 68ch;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Theme-dependent colours and the next/font families both resolve at runtime. */
+@theme inline {
+  --color-paper: var(--bg);
+  --color-ink: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-line: var(--edge);
+  --color-surface: var(--card);
+  --color-accent: var(--accent);
+
+  --font-display: var(--font-inter-tight), system-ui, sans-serif;
+  --font-sans: var(--font-inter-tight), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, Consolas, monospace;
+}
+
+/* Section themes. Only black, olive and off-white exist; the rest are tints of those. */
+:root,
+[data-theme="dark"] {
+  --bg: #0b0b0a;
+  --fg: #f3f2ed;
+  --fg-muted: #9a9a90;
+  --edge: #262622;
+  --card: #151513;
+  --accent: #8c9a55;
+}
+
+[data-theme="light"] {
+  --bg: #f3f2ed;
+  --fg: #0b0b0a;
+  --fg-muted: #5e5d55;
+  --edge: #dcdbd2;
+  --card: #e8e7e0;
+  --accent: #55602c;
+}
+
+[data-theme="signal"],
+[data-theme="cobalt"],
+[data-theme="acid"] {
+  --bg: #8c9a55;
+  --fg: #0b0b0a;
+  --fg-muted: #2f3618;
+  --edge: #0b0b0a;
+  --card: #9aa766;
+  --accent: #0b0b0a;
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  line-height: var(--text-eyebrow--line-height);
+  letter-spacing: var(--text-eyebrow--letter-spacing);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@utility gutter {
+  padding-inline: calc(var(--spacing) * 6);
+
+  @media (width >= 48rem) {
+    padding-inline: calc(var(--spacing) * 12);
+  }
+}
+
+@utility section-rhythm {
+  padding-block: calc(var(--spacing) * 26);
+
+  @media (width >= 48rem) {
+    padding-block: calc(var(--spacing) * 40);
+  }
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    color: var(--fg);
+    -webkit-text-size-adjust: 100%;
+    transition:
+      --bg 700ms var(--ease-expo),
+      --fg 700ms var(--ease-expo),
+      --fg-muted 700ms var(--ease-expo),
+      --edge 700ms var(--ease-expo),
+      --card 700ms var(--ease-expo),
+      --accent 700ms var(--ease-expo);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-olive);
+    color: var(--color-coal);
+  }
+
+  /* Lenis recommends these so native and smooth scrolling never fight each other. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+}
+
+/* Above-the-fold entry: pure CSS so it runs before hydration and never delays the LCP text. */
+@keyframes enter-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@utility animate-enter {
+  animation: enter-up 0.6s var(--ease-expo) both;
+  animation-delay: calc(var(--enter-index, 0) * 60ms);
+}
+
+@keyframes scroll-cue {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(300%);
+  }
+}
+
+@utility animate-scroll-cue {
+  animation: scroll-cue 1.8s var(--ease-expo) infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -82,6 +82,8 @@ export interface CompactProject {
   readonly stack: readonly string[];
   readonly description: string;
   readonly shot?: Screenshot;
+  /** Further screenshots shown smaller under the main one. */
+  readonly moreShots?: readonly Screenshot[];
   readonly links?: readonly LinkCopy[];
 }
 

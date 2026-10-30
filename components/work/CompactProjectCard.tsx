@@ -7,7 +7,11 @@ export function CompactProjectCard({ project }: { readonly project: CompactProje
   return (
     <article className="h-full rounded-[20px] bg-surface p-6 md:p-8">
       {project.shot ? (
-        <Screenshot shot={project.shot} sizes="(min-width: 768px) 380px, 100vw" className="mb-6" />
+        <div className="mb-6 space-y-3">
+          {[project.shot, ...(project.moreShots ?? [])].map((shot) => (
+            <Screenshot key={shot.src} shot={shot} sizes="(min-width: 768px) 380px, 100vw" />
+          ))}
+        </div>
       ) : null}
       <h3 className="font-display text-h2 text-ink">{project.name}</h3>
       {project.descriptor || project.role ? (

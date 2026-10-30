@@ -16,7 +16,7 @@ export const hero = {
 
 export const featuredSection: SectionCopy = {
   eyebrow: "Selected work",
-  heading: "Five projects, built end to end."
+  heading: "Selected work, built end to end."
 };
 
 export const finalCta = {

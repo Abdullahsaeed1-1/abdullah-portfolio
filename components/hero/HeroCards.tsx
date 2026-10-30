@@ -115,6 +115,12 @@ export function WorkCard({ className }: { readonly className?: string }) {
           →
         </span>
       </Link>
+      <Link
+        href={work.moreHref}
+        className="mt-3 block border-t border-cream/10 pt-3 text-[12px] text-cream/55 transition-colors duration-200 hover:text-cream"
+      >
+        {work.moreNote} →
+      </Link>
     </nav>
   );
 }

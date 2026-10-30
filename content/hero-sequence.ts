@@ -7,13 +7,15 @@ export const heroSequence = {
   greeting: { left: "HELLO,", right: "I'M ABDULLAH" },
   portraitLabel:
     "A portrait made of thousands of dots in lavender and lime that scatter as the pointer moves through them.",
-  windowLine: { strong: "Five projects,", soft: "built end to end." },
+  windowLine: { strong: "Selected work,", soft: "built end to end." },
 
   // Phase two: who I am in four cards. Facts come from CONTENT.md and Abdullah's CV.
   work: {
     label: "Selected work",
     allHref: "/work",
-    allLabel: "All work"
+    allLabel: "All work",
+    moreNote: "A selection — more on request",
+    moreHref: "/contact"
   },
   experience: {
     label: "Experience",

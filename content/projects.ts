@@ -606,7 +606,19 @@ export const otherProjects: readonly CompactProject[] = [
     name: "Luxara",
     stack: ["React", "e-commerce"],
     description:
-      "My own handmade and stainless-steel jewellery brand. Built the storefront, the brand and the customer side of it."
+      "My own handmade and stainless-steel jewellery brand. Built the storefront, the brand and the customer side of it.",
+    shot: {
+      src: "/shots/luxara-home.png",
+      label: "screenshot: luxara home",
+      alt: "The Luxara storefront: Everyday Shine — gold and silver stainless steel cuffs."
+    },
+    moreShots: [
+      {
+        src: "/shots/luxara-shop.png",
+        label: "screenshot: luxara shop",
+        alt: "The Luxara shop: handmade bead bracelets and the signature gold cuff, with prices."
+      }
+    ]
   },
   {
     name: "Hangout",

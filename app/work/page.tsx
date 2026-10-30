@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { Container, PageShell } from "@/components/layout/PageShell";
 import { ThemedSection } from "@/components/layout/ThemedSection";
+import { ButtonLink } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CompactProjectCard } from "@/components/work/CompactProjectCard";
@@ -60,6 +61,26 @@ export default function WorkPage() {
               </li>
             ))}
           </ul>
+        </Container>
+      </ThemedSection>
+
+      <ThemedSection theme="dark" labelledBy="more-work-heading" className="section-rhythm">
+        <Container>
+          <Reveal className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="eyebrow text-accent">{workPage.more.eyebrow}</p>
+              <h2
+                id="more-work-heading"
+                className="mt-4 max-w-[20ch] font-display text-h1 text-ink"
+              >
+                {workPage.more.heading}
+              </h2>
+              <p className="mt-6 max-w-[52ch] text-body-lg text-muted">{workPage.more.line}</p>
+            </div>
+            <ButtonLink href={workPage.more.action.href} variant="primary" className="shrink-0">
+              {workPage.more.action.label} →
+            </ButtonLink>
+          </Reveal>
         </Container>
       </ThemedSection>
     </PageShell>

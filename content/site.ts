@@ -22,7 +22,7 @@ export const externalLinks = {
   thinkova: "https://www.thinkovatechnologies.com",
   aliPublicSchool: "https://alipublicschool.com.pk",
   apsPremier: "https://www.apspremier.com",
-  luxara: "https://luxara-eight.vercel.app",
+  luxara: "https://www.luxara.website",
   timetableLive: "https://ali-school-main.vercel.app",
   thinkovaProjects: {
     apsPremier: "https://www.thinkovatechnologies.com/projects/aps-premier-campus",

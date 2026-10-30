@@ -90,6 +90,16 @@ const timetable: FeaturedProject = {
         alt: "The Warnings & Data Completeness page: the school's own five checks, grouped by campus."
       },
       {
+        src: "/shots/timetable-dashboard.png",
+        label: "screenshot: dashboard",
+        alt: "The desktop app's dashboard: 42 teachers, 35 classes, 24 subjects, timetable generated, and the three campuses."
+      },
+      {
+        src: "/shots/timetable-print.png",
+        label: "screenshot: print and export",
+        alt: "Printing a whole campus's timetable at once, as a PDF or Excel file."
+      },
+      {
         src: "/shots/timetable-health.png",
         label: "screenshot: school health",
         alt: "School Health for the Junior campus: 280 of 280 periods scheduled, 7 of 8 classes complete, and the five checks."

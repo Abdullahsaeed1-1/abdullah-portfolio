@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -148,6 +149,24 @@ export function JourneyScroll() {
                     {chapter.todo ? (
                       <div className="mt-6 max-w-prose">
                         <TodoNote>{chapter.todo}</TodoNote>
+                      </div>
+                    ) : null}
+                    {chapter.images?.length ? (
+                      <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                        {chapter.images.map((image) => (
+                          <div
+                            key={image.src}
+                            className="relative aspect-[16/10] overflow-hidden rounded-[16px] border border-line bg-surface"
+                          >
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              fill
+                              sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 100vw"
+                              className="object-cover object-top"
+                            />
+                          </div>
+                        ))}
                       </div>
                     ) : null}
                     <ul className="mt-8 flex flex-wrap gap-2">

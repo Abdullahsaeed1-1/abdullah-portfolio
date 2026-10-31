@@ -568,11 +568,68 @@ const aliPublicSchool: FeaturedProject = {
   }
 };
 
+const luxara: FeaturedProject = {
+  slug: "luxara",
+  name: "Luxara",
+  title: "Luxara — my own jewellery brand",
+  oneLiner: "A brand I started and run myself: sourcing, the storefront, packaging and delivery.",
+  role: "Founder — every part of it",
+  stack: ["React", "E-commerce", "Custom domain", "Business email", "Sourcing", "Courier delivery"],
+  year: "2025 — today",
+  cover: {
+    src: "/shots/luxara-home.png",
+    label: "screenshot: luxara home",
+    alt: "The Luxara storefront: Everyday Shine — gold and silver stainless steel cuffs."
+  },
+  accent: "night",
+  links: [
+    { label: "luxara.website", href: externalLinks.luxara },
+    { label: "On Thinkova", href: externalLinks.thinkovaProjects.luxara }
+  ],
+  caseStudy: {
+    problem: [
+      "I wanted to know what it takes to run a business end to end — not just build the website for one. So I started my own: Luxara, handmade bracelets and stainless-steel cuffs.",
+      "Everything that happens before and after the website became my job too: finding the products, packing every order and getting it to the customer."
+    ],
+    decisions: [
+      {
+        title: "Sourcing in person, from Shah Alami.",
+        paragraphs: [
+          "I sourced the stock myself from Shah Alami, Lahore's wholesale market — choosing every piece by hand rather than ordering blind from a catalogue."
+        ]
+      },
+      {
+        title: "My own storefront, on my own domain.",
+        paragraphs: [
+          "Instead of renting a marketplace listing, I built the store: a React storefront on luxara.website with its own business email, product pages, collections and prices."
+        ]
+      },
+      {
+        title: "Packaging and delivery handled myself.",
+        paragraphs: [
+          "Every order is packed by me and handed to a courier, and I manage it until it reaches the customer. Doing the unglamorous part myself is how I learned where a customer's experience actually breaks."
+        ]
+      }
+    ],
+    built: [
+      "The brand, the product line, the e-commerce site with new arrivals, a cuff collection and handmade bracelets, a custom domain and business email, and the order flow from checkout to courier. It earned verified customer reviews."
+    ],
+    gallery: [
+      {
+        src: "/shots/luxara-shop.png",
+        label: "screenshot: luxara shop",
+        alt: "The Luxara shop: handmade bead bracelets and the signature gold cuff, with prices."
+      }
+    ]
+  }
+};
+
 export const featuredProjects: readonly FeaturedProject[] = [
   igris,
   jarvis,
   timetable,
   aliPublicSchool,
+  luxara,
   apsWebsite
 ];
 
@@ -597,28 +654,6 @@ export const otherProjects: readonly CompactProject[] = [
       label: "screenshot: apspremier.com",
       alt: "The apspremier.com home page."
     }
-  },
-  {
-    links: [
-      { label: "Live store", href: externalLinks.luxara },
-      { label: "On Thinkova", href: externalLinks.thinkovaProjects.luxara }
-    ],
-    name: "Luxara",
-    stack: ["React", "e-commerce"],
-    description:
-      "My own handmade and stainless-steel jewellery brand. Built the storefront, the brand and the customer side of it.",
-    shot: {
-      src: "/shots/luxara-home.png",
-      label: "screenshot: luxara home",
-      alt: "The Luxara storefront: Everyday Shine — gold and silver stainless steel cuffs."
-    },
-    moreShots: [
-      {
-        src: "/shots/luxara-shop.png",
-        label: "screenshot: luxara shop",
-        alt: "The Luxara shop: handmade bead bracelets and the signature gold cuff, with prices."
-      }
-    ]
   },
   {
     name: "Hangout",

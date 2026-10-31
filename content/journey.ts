@@ -17,6 +17,8 @@ export interface JourneyChapter {
   readonly links: readonly (LinkCopy & { readonly isExternal?: boolean })[];
   /** Rendered visibly; never replaced with invented copy. */
   readonly todo?: string;
+  /** Screenshots shown under the chapter; files must exist in public/shots. */
+  readonly images?: readonly { readonly src: string; readonly alt: string }[];
 }
 
 // Facts from CONTENT.md and Abdullah's CV only. The home page scrolls through these one by one.
@@ -59,10 +61,23 @@ export const journeyChapters: readonly JourneyChapter[] = [
     year: "2025",
     title: "Luxara",
     paragraphs: [
-      "My own handmade and stainless-steel jewellery brand, built end to end: the product line, the e-commerce site, a custom domain and business email, and finding the customers. It earned verified customer reviews."
+      "My own handmade and stainless-steel jewellery brand, run end to end: sourcing stock from Shah Alami, the e-commerce site on its own domain, packing every order and sending it by courier. It earned verified customer reviews."
     ],
     highlights: ["Own brand", "E-commerce", "Customer acquisition"],
-    links: [{ label: "Visit Luxara", href: externalLinks.luxara, isExternal: true }]
+    links: [
+      { label: "Luxara case study", href: "/work/luxara" },
+      { label: "Visit Luxara", href: externalLinks.luxara, isExternal: true }
+    ],
+    images: [
+      {
+        src: "/shots/luxara-home.png",
+        alt: "The Luxara storefront: Everyday Shine — gold and silver stainless steel cuffs."
+      },
+      {
+        src: "/shots/luxara-shop.png",
+        alt: "The Luxara shop: handmade bead bracelets and the signature gold cuff, with prices."
+      }
+    ]
   },
   {
     id: "2026-agents",

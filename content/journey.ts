@@ -18,7 +18,12 @@ export interface JourneyChapter {
   /** Rendered visibly; never replaced with invented copy. */
   readonly todo?: string;
   /** Screenshots shown under the chapter; files must exist in public/shots. */
-  readonly images?: readonly { readonly src: string; readonly alt: string }[];
+  readonly images?: readonly {
+    readonly src: string;
+    readonly alt: string;
+    /** "contain" mats a tall phone shot instead of cropping it. */
+    readonly fit?: "contain";
+  }[];
 }
 
 // Facts from CONTENT.md and Abdullah's CV only. The home page scrolls through these one by one.
@@ -53,6 +58,16 @@ export const journeyChapters: readonly JourneyChapter[] = [
     links: [
       { label: "Ali Public School case study", href: "/work/ali-public-school" },
       { label: "apspremier.com", href: externalLinks.apsPremier, isExternal: true }
+    ],
+    images: [
+      {
+        src: "/shots/aps-premier.png",
+        alt: "apspremier.com, the website I built for the Ali Public School Premier campus."
+      },
+      {
+        src: "/shots/aps-post-hiring.png",
+        alt: "A hiring post I designed for Ali Public School's social media."
+      }
     ]
   },
   {
@@ -91,6 +106,14 @@ export const journeyChapters: readonly JourneyChapter[] = [
     links: [
       { label: "Igris case study", href: "/work/igris" },
       { label: "Jarvis case study", href: "/work/jarvis" }
+    ],
+    images: [
+      { src: "/shots/igris-orb.png", alt: "Igris mid-conversation, showing its voice interface." },
+      {
+        src: "/shots/jarvis-voice.png",
+        alt: "Jarvis's voice app on an iPhone, with quick actions to plan the day, log an expense and add a task.",
+        fit: "contain"
+      }
     ]
   },
   {
@@ -102,7 +125,13 @@ export const journeyChapters: readonly JourneyChapter[] = [
       "Around the same time, Irtaza and I founded Thinkova Technologies, a software and AI services company. I own the full company build: the brand system, a 14-service catalogue, tiered pricing for local and international markets, and the company platform."
     ],
     highlights: ["Co-founder & CEO", "35+ clients served", "14-service catalogue"],
-    links: [{ label: "thinkovatechnologies.com", href: externalLinks.thinkova, isExternal: true }]
+    links: [{ label: "thinkovatechnologies.com", href: externalLinks.thinkova, isExternal: true }],
+    images: [
+      {
+        src: "/shots/thinkova-home.png",
+        alt: "The Thinkova Technologies homepage: Intelligence, engineered for the ambitious."
+      }
+    ]
   },
   {
     id: "2026-group",
@@ -113,7 +142,17 @@ export const journeyChapters: readonly JourneyChapter[] = [
       "The school group restructured into a matrix, and I was given two formal roles reporting to group leadership across its branches: Group Marketing Analyst and Group IT & Digital Services Analyst."
     ],
     highlights: ["Classster rollout", "Xero rollout", "Data governance", "AI in classrooms"],
-    links: [{ label: "The work with the group", href: "/work/ali-public-school" }]
+    links: [{ label: "The work with the group", href: "/work/ali-public-school" }],
+    images: [
+      {
+        src: "/shots/aps-meta-ads.png",
+        alt: "Meta Business Suite ads summary for APS Premier over 90 days: 577.4K views and 5,458 link clicks."
+      },
+      {
+        src: "/shots/timetable-dashboard.png",
+        alt: "The timetable solver dashboard I built for the school group."
+      }
+    ]
   },
   {
     id: "now",

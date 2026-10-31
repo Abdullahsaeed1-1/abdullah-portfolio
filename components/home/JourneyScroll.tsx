@@ -163,7 +163,11 @@ export function JourneyScroll() {
                               alt={image.alt}
                               fill
                               sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 100vw"
-                              className="object-cover object-top"
+                              className={
+                                image.fit === "contain"
+                                  ? "object-contain p-3"
+                                  : "object-cover object-top"
+                              }
                             />
                           </div>
                         ))}

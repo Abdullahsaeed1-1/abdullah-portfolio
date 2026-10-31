@@ -24,6 +24,7 @@ export const heroSequence = {
     lines: [
       "Freelance since January 2022",
       "2+ years with outside clients",
+      "Backend internship at CodeAlpha, 2026",
       "35+ clients served through Thinkova"
     ],
     href: "/journey",

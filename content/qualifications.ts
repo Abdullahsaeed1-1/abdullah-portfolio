@@ -18,6 +18,11 @@ export const qualifications = {
       year: "Aug 2026"
     },
     {
+      name: "Backend Development Internship (virtual), 10 Jun – 10 Jul 2026",
+      issuer: "CodeAlpha",
+      year: "Jul 2026"
+    },
+    {
       name: "Introduction to Retrieval Augmented Generation (RAG)",
       issuer: "Duke University · Coursera",
       year: "Jul 2026"

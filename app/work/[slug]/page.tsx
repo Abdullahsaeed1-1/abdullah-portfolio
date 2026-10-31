@@ -15,6 +15,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Screenshot } from "@/components/ui/Screenshot";
 import { caseStudyLabels } from "@/content/case-study";
 import { featuredProjects, getFeaturedProject } from "@/content/projects";
+import { shotExists } from "@/lib/shots";
 
 interface CaseStudyPageProps {
   readonly params: Promise<{ slug: string }>;
@@ -51,6 +52,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   }
 
   const { caseStudy } = project;
+  const gallery = caseStudy.gallery?.filter((shot) => shotExists(shot.src)) ?? [];
   const currentIndex = featuredProjects.indexOf(project);
   const nextProject = featuredProjects[(currentIndex + 1) % featuredProjects.length];
 
@@ -112,10 +114,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             </CaseStudySection>
           ) : null}
 
-          {caseStudy.gallery?.length ? (
+          {gallery.length ? (
             <Container className="pt-10 md:pt-16">
               <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:-ml-16">
-                {caseStudy.gallery.map((shot, index) => (
+                {gallery.map((shot, index) => (
                   <Reveal
                     key={shot.src}
                     staggerIndex={index}

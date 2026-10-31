@@ -11,9 +11,11 @@ export function Footer() {
       <Container>
         <a
           href={`mailto:${site.businessEmail}`}
-          className="block break-all font-display text-h1 text-ink transition-colors duration-150 hover:text-olive"
+          className="block font-display text-[1.6rem] leading-tight text-ink transition-colors duration-150 hover:text-olive sm:text-h1"
         >
-          {site.businessEmail}
+          {site.businessEmail.split("@")[0]}@
+          <wbr />
+          {site.businessEmail.split("@")[1]}
         </a>
         <div className="mt-16 flex flex-col gap-4 border-t border-line pt-6 font-mono text-mono md:flex-row md:items-center md:gap-10">
           <a href={`mailto:${site.email}`} className={linkClass}>

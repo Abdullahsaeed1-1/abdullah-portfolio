@@ -133,7 +133,7 @@ export function JourneyScroll() {
                   key={chapter.id}
                   data-chapter=""
                   className={cn(
-                    "flex min-h-[70svh] items-center border-t border-line py-16 transition-opacity duration-500 first:border-t-0 lg:min-h-[85svh] lg:border-t-0",
+                    "flex items-center border-t border-line py-16 transition-opacity duration-500 first:border-t-0 lg:min-h-[85svh] lg:border-t-0",
                     isInFocus ? "opacity-100" : "lg:opacity-30"
                   )}
                 >

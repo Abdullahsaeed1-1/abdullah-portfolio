@@ -54,10 +54,12 @@ export function Nav() {
     <>
       {/* The blend sits on the fixed header itself: it is the stacking context, so the text
           differences against the page underneath rather than against a transparent box. */}
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-50 mix-blend-difference">
+      {/* Phones get a solid strip so the name never sits on top of page text; wider screens keep
+          plain text that blends against whatever is underneath. */}
+      <header className="pointer-events-none fixed inset-x-0 top-0 z-50 border-b border-cream/10 bg-night/90 backdrop-blur-md md:border-0 md:bg-transparent md:mix-blend-difference md:backdrop-blur-none">
         <nav
           aria-label="Primary"
-          className="gutter pointer-events-auto mx-auto flex h-20 max-w-[1440px] items-center justify-between text-cream"
+          className="gutter pointer-events-auto mx-auto flex h-14 max-w-[1440px] md:h-20 items-center justify-between text-cream"
         >
           <Link href="/" className="text-[17px] font-semibold tracking-[-0.02em]">
             {site.name}

@@ -142,10 +142,12 @@ export function HeroSequence({ portraitSrc }: HeroSequenceProps) {
             { zoom: isNarrow ? 2.2 : 3, offsetX: isNarrow ? 0 : -0.22, duration: 1.4 },
             "<"
           )
+          // Phones have no room beside the face, so the dots dim behind the journey text instead.
+          .to(select("[data-portrait]"), { opacity: isNarrow ? 0.18 : 1, duration: 0.8 }, "<0.4")
           .to(
             select('[data-seq="dash"]'),
             { autoAlpha: 1, x: 0, duration: 0.8, stagger: 0.15 },
-            "<0.6"
+            "<0.2"
           )
           .to({}, { duration: 0.8 });
       }, root);
@@ -196,6 +198,7 @@ export function HeroSequence({ portraitSrc }: HeroSequenceProps) {
 
           <canvas
             ref={canvasRef}
+            data-portrait=""
             role="img"
             aria-label={heroSequence.portraitLabel}
             width={1280}

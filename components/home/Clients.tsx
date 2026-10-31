@@ -67,7 +67,7 @@ export function Clients() {
               href={testimonial.source.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-mono text-muted underline-offset-4 hover:text-accent hover:underline"
+              className="inline-flex min-h-11 items-center font-mono text-mono text-muted underline-offset-4 hover:text-accent hover:underline"
             >
               {testimonial.source.label} ↗
             </a>
@@ -105,7 +105,7 @@ export function Clients() {
                         <Link
                           key={link.href}
                           href={link.href}
-                          className="group inline-flex items-center gap-1.5 text-small font-medium text-accent"
+                          className="group inline-flex min-h-11 items-center gap-1.5 text-small font-medium text-accent"
                         >
                           {link.label}
                           <span

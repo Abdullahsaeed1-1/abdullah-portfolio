@@ -92,7 +92,7 @@ export function JourneyScroll() {
       data-theme="dark"
       data-section-theme="dark"
       aria-labelledby="journey-scroll-heading"
-      className="relative bg-paper pb-26 text-ink md:pb-40"
+      className="relative bg-paper pb-26 text-ink max-xl:-mt-10 max-xl:rounded-t-[40px] max-xl:pt-10 md:pb-40 md:max-xl:-mt-12 md:max-xl:rounded-t-[56px]"
     >
       <div className="gutter mx-auto max-w-content">
         <h2 id="journey-scroll-heading" className="sr-only">
@@ -171,7 +171,7 @@ export function JourneyScroll() {
                             <Link
                               key={link.href}
                               href={link.href}
-                              className="group inline-flex items-center gap-2 text-small font-medium text-accent"
+                              className="group inline-flex min-h-11 items-center gap-2 text-small font-medium text-accent"
                             >
                               {link.label}
                               <span

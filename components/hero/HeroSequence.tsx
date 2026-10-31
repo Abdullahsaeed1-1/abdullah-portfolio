@@ -89,7 +89,8 @@ export function HeroSequence({ portraitSrc }: HeroSequenceProps) {
       const select = (selector: string) => root.querySelectorAll<HTMLElement>(selector);
       const isNarrow = window.innerWidth < 768;
 
-      root.style.height = "400svh";
+      // Phones get a shorter pin: the proof lists render as normal sections below the hero there.
+      root.style.height = isNarrow ? "220svh" : "400svh";
 
       const context = gsap.context(() => {
         gsap.set(select("[data-seq]"), { autoAlpha: 0 });
@@ -170,6 +171,7 @@ export function HeroSequence({ portraitSrc }: HeroSequenceProps) {
       aria-labelledby="hero-heading"
       data-theme="dark"
       data-section-theme="dark"
+      data-hero=""
       className="relative h-svh bg-night text-cream"
     >
       <div className="sticky top-0 h-svh overflow-hidden">
@@ -218,7 +220,7 @@ export function HeroSequence({ portraitSrc }: HeroSequenceProps) {
           </p>
 
           <div data-tagline="" className="gutter absolute inset-x-0 bottom-10 md:bottom-14">
-            <p className="eyebrow inline-block rounded-full border border-cream/15 px-3 py-1.5 text-cream/60">
+            <p className="eyebrow inline-block rounded-full border border-cream/15 bg-night/85 px-3 py-1.5 text-cream/70 backdrop-blur-sm">
               {heroSequence.tagline.eyebrow}
             </p>
             <h1 id="hero-heading" className="mt-4 max-w-[22ch] font-display text-h2 text-cream">
@@ -276,13 +278,13 @@ export function HeroSequence({ portraitSrc }: HeroSequenceProps) {
         <div className="pointer-events-none absolute inset-0 [&>*]:pointer-events-auto">
           {/* Two columns so no card can slide over another; the lower card in each column
               steps aside on short screens. */}
-          <div className="absolute left-[2.5%] top-[11%] hidden flex-col gap-4 md:flex">
+          <div className="absolute left-[2.5%] top-[11%] hidden flex-col gap-4 xl:flex">
             <WorkCard />
-            <TestimonialCard className="hidden lg:block [@media(max-height:860px)]:hidden" />
+            <TestimonialCard className="[@media(max-height:860px)]:hidden" />
           </div>
-          <div className="absolute right-[2.5%] top-[11%] hidden flex-col gap-4 md:flex">
+          <div className="absolute right-[2.5%] top-[11%] hidden flex-col gap-4 xl:flex">
             <WorkedWithCard />
-            <ExperienceCard className="hidden lg:block [@media(max-height:860px)]:hidden" />
+            <ExperienceCard className="[@media(max-height:860px)]:hidden" />
           </div>
           <div className="absolute inset-x-0 bottom-[3%] flex justify-center">
             <StartBar />

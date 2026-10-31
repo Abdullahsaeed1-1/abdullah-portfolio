@@ -17,7 +17,7 @@ export function ExternalLink({ href, children, className }: ExternalLinkProps) {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-line px-4 py-2 text-small font-medium text-ink transition-colors duration-300 hover:border-accent hover:text-paper",
+        "group relative inline-flex min-h-11 items-center gap-2 overflow-hidden rounded-full border border-line px-4 py-2 text-small font-medium text-ink transition-colors duration-300 hover:border-accent hover:text-paper",
         className
       )}
     >

@@ -22,7 +22,7 @@ export const qualifications = {
       issuer: "Duke University · Coursera",
       year: "Jul 2026"
     },
-    { name: "AWS Academy Cloud Foundations", issuer: "Amazon Web Services", year: null }
+    { name: "AWS Academy Cloud Foundations", issuer: "Amazon Web Services", year: "Completed" }
   ],
   languages: ["English", "Urdu"]
 } as const;

@@ -3,7 +3,7 @@ import { ThemedSection } from "@/components/layout/ThemedSection";
 import { site } from "@/content/site";
 
 const linkClass =
-  "text-ink underline-offset-4 transition-colors duration-150 hover:text-olive hover:underline";
+  "inline-flex min-h-11 items-center text-ink underline-offset-4 transition-colors duration-150 hover:text-olive hover:underline";
 
 export function Footer() {
   return (
@@ -11,7 +11,7 @@ export function Footer() {
       <Container>
         <a
           href={`mailto:${site.businessEmail}`}
-          className="block font-display text-[1.6rem] leading-tight text-ink transition-colors duration-150 hover:text-olive sm:text-h1"
+          className="block font-display text-[1.35rem] leading-tight min-[360px]:text-[1.6rem] text-ink transition-colors duration-150 hover:text-olive sm:text-h1"
         >
           {site.businessEmail.split("@")[0]}@
           <wbr />

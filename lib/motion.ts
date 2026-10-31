@@ -10,7 +10,8 @@ export const STAGGER_SECONDS = 0.06;
 export const ENTRY_DISTANCE_PX = 20;
 
 export const entryVariants: Variants = {
-  hidden: { opacity: 0, y: ENTRY_DISTANCE_PX },
+  // Never fully transparent, so a row caught mid-animation is still readable.
+  hidden: { opacity: 0.2, y: ENTRY_DISTANCE_PX },
   visible: { opacity: 1, y: 0 }
 };
 

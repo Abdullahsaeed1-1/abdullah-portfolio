@@ -38,7 +38,11 @@ export function Reveal({ children, staggerIndex = 0, className }: RevealProps) {
           return;
         }
 
-        setRevealState((state) => (state === "static" ? "hidden" : state));
+        // Only content still below the fold waits to animate. Anything already scrolled past —
+        // a deep link, a restored scroll position, a fast flick — stays fully visible.
+        if ((entry?.boundingClientRect.top ?? 0) > 0) {
+          setRevealState((state) => (state === "static" ? "hidden" : state));
+        }
       },
       { rootMargin: REVEAL_ROOT_MARGIN }
     );

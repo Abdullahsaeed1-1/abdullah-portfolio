@@ -38,7 +38,13 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
     title: project.title,
     description: project.oneLiner,
     alternates: { canonical: `/work/${project.slug}` },
-    openGraph: { title: project.title, description: project.oneLiner, url: `/work/${project.slug}` }
+    openGraph: {
+      title: project.title,
+      description: project.oneLiner,
+      url: `/work/${project.slug}`,
+      // A page-level openGraph replaces the root one, so the shared image is restated here.
+      images: ["/opengraph-image"]
+    }
   };
 }
 

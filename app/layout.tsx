@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { readonly children: React.Reac
       <body className="bg-paper text-ink">
         <a
           href="#main"
-          className="fixed left-4 top-4 z-[60] -translate-y-24 rounded-full border border-ink bg-paper px-4 py-2 text-small focus:translate-y-0"
+          className="fixed left-4 top-4 z-[60] min-h-11 -translate-y-24 rounded-full border border-ink bg-paper px-4 py-2 text-small focus:translate-y-0"
         >
           Skip to content
         </a>

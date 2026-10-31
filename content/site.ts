@@ -3,7 +3,8 @@ import type { LinkCopy } from "@/content/types";
 export const site = {
   name: "Abdullah Saeed",
   domain: "abdullahwork.me",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://abdullahwork.me",
+  // The live site is served from www (the apex redirects there), so www is the canonical host.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.abdullahwork.me",
   title: "Abdullah Saeed — full-stack & AI automation developer",
   description:
     "I build AI agents and systems that do real work. Case studies: a constraint-solved school timetable, a voice agent, a business assistant, and an institutional website rebuild.",
@@ -14,7 +15,7 @@ export const site = {
     label: "linkedin.com/in/abdullah-saeed-614a402bb",
     href: "https://www.linkedin.com/in/abdullah-saeed-614a402bb/"
   } as LinkCopy | null,
-  copyright: "© 2026"
+  copyright: "© 2026 Abdullah Saeed"
 } as const;
 
 /** Every live URL the site points to, checked live on 30 October 2026. */

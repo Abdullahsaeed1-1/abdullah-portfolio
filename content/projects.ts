@@ -640,7 +640,7 @@ export const otherProjects: readonly CompactProject[] = [
     role: "Backend and database lead",
     stack: ["Node.js", "MongoDB", "computer vision"],
     description:
-      "Pakistani food recognition across 50–60 dish classes. Built the API and nutrition calculation engine; evaluated YOLOv8-seg against an EfficientNet and U-Net pipeline. Final year project, group S26CS044."
+      "Pakistani food recognition across 50–60 dish classes. Built the API and nutrition calculation engine; evaluated YOLOv8-seg against an EfficientNet and U-Net pipeline. Built with a team at the University of Central Punjab."
   },
   {
     links: [{ label: "Live site", href: externalLinks.apsPremier }],

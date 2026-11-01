@@ -5,8 +5,8 @@ export const qualifications = {
   education: {
     label: "Education",
     degree: "BS Computer Science",
-    institution: "University of Central Punjab, Lahore",
-    status: "Final year"
+    institution: "University of Central Punjab",
+    status: "Lahore"
   },
   // Coursera certificates as listed on the account (Certificates & Badges), with completion months.
   certifications: [

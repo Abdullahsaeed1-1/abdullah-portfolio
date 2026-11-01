@@ -24,7 +24,7 @@ export default function JourneyPage() {
         </Container>
       </ThemedSection>
 
-      {/* The one place "student" appears on the site — at the end, after the proof. */}
+      {/* Closing line, after the proof. */}
       <ThemedSection as="div" theme="signal" className="section-rhythm">
         <Container>
           <p className="max-w-[20ch] font-display text-display text-ink">{journeyClosing}</p>

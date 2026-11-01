@@ -157,11 +157,11 @@ export const journeyChapters: readonly JourneyChapter[] = [
     id: "now",
     date: "Today",
     year: "Now",
-    title: "Still a student",
+    title: "Building what comes next",
     paragraphs: [
-      "Still in my final year of computer science. Everything above happened alongside it."
+      "Running Thinkova Technologies with Irtaza, leading technology and marketing across the APS Group, and still building agents that do real work."
     ],
-    highlights: ["BS Computer Science", "University of Central Punjab", "Final year"],
+    highlights: ["Co-founder & CEO, Thinkova", "Two APS Group roles", "35+ clients served"],
     links: [{ label: "Start a conversation", href: "/contact" }]
   }
 ];
@@ -177,5 +177,4 @@ export const milestones: readonly Milestone[] = journeyChapters
     todo: chapter.todo
   }));
 
-export const journeyClosing =
-  "Still in my final year of computer science. Everything above happened alongside it.";
+export const journeyClosing = "Four years in, and still shipping.";

@@ -110,9 +110,8 @@ export const journeyChapters: readonly JourneyChapter[] = [
     images: [
       { src: "/shots/igris-orb.png", alt: "Igris mid-conversation, showing its voice interface." },
       {
-        src: "/shots/jarvis-voice.png",
-        alt: "Jarvis's voice app on an iPhone, with quick actions to plan the day, log an expense and add a task.",
-        fit: "contain"
+        src: "/shots/jarvis-desktop.png",
+        alt: "The Jarvis web app: tasks, outbox, finance, memory and the systems panel."
       }
     ]
   },

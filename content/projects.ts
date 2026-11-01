@@ -254,10 +254,9 @@ const jarvis: FeaturedProject = {
   ],
   year: "2026",
   cover: {
-    src: "/shots/jarvis-telegram.png",
-    label: "screenshot: jarvis in telegram",
-    alt: "Jarvis in Telegram: the day's priorities, pending approvals, API spend against budget and deadline reminders.",
-    fit: "portrait"
+    src: "/shots/jarvis-desktop.png",
+    label: "screenshot: jarvis desktop",
+    alt: "The Jarvis web app: tasks, an outbox of published Luxara posts, monthly finance, memory, and a systems panel showing the model, monthly cost and connected channels."
   },
   accent: "signal",
   canvas: "tool-graph",

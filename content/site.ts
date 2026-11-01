@@ -12,8 +12,8 @@ export const site = {
   businessEmail: "abdullah@thinkovatechnologies.com",
   github: { label: "github.com/Abdullahsaeed1-1", href: "https://github.com/Abdullahsaeed1-1" },
   linkedin: {
-    label: "linkedin.com/in/abdullah-saeed-614a402bb",
-    href: "https://www.linkedin.com/in/abdullah-saeed-614a402bb/"
+    label: "linkedin.com/in/abdullah-saeed-ceo",
+    href: "https://www.linkedin.com/in/abdullah-saeed-ceo/"
   } as LinkCopy | null,
   copyright: "© 2026 Abdullah Saeed"
 } as const;
